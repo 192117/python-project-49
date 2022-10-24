@@ -1,18 +1,16 @@
-import prompt
 import random
+from brain_games.games import questions_answer
 
 
 def progression_game():
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
+    name = questions_answer()
     print('What number is missing in the progression?')
     count = 0
     while count < 3:
         values = [i for i in range(random.randint(1, 20), random.randint(50, 79), random.randint(1, 11))]
         ind = random.randint(0, len(values))
         answer, values[ind] = values[ind], '..'
-        print('Question: ', *values)
-        answer_user = int(prompt.string('Your answer: '))
+        answer_user = int(questions_answer(values))
         if answer_user != answer:
             print(f"'{answer_user}' is wrong answer ;(. Correct answer was '{answer}'.")
             print(f"Let's try again, {name}!")

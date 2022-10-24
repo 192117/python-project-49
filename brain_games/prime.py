@@ -1,5 +1,5 @@
-import prompt
 import random
+from brain_games.games import questions_answer
 
 
 def isprime(n):
@@ -12,14 +12,12 @@ def isprime(n):
 
 
 def prime_game():
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
+    name = questions_answer()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     count = 0
     while count < 3:
         number = random.randint(1, 21)
-        print(f'Question: {number}')
-        answer_user = prompt.string('Your answer: ')
+        answer_user = questions_answer([number])
         if (isprime(number) is True and answer_user == 'yes') or \
                 (isprime(number) is False and answer_user == 'no'):
             print('Correct!')

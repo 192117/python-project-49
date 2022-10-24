@@ -1,11 +1,10 @@
-import prompt
 import random
+from brain_games.games import questions_answer
 
 
 def calc_game():
     operators = ['+', '-', "*"]
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
+    name = questions_answer()
     print('What is the result of the expression?')
     count = 0
     while count < 3:
@@ -17,8 +16,7 @@ def calc_game():
             '-': number1 - number2,
             '*': number1 * number2
         }
-        print(f'Question: {number1} {operator} {number2}')
-        answer_user = int(prompt.string('Your answer: '))
+        answer_user = int(questions_answer([number1, operator, number2]))
         if answer_user != result.get(operator):
             print(f"'{answer_user}' is wrong answer ;(. Correct answer was '{result.get(operator)}'.")
             print(f"Let's try again, {name}!")
