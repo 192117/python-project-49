@@ -13,7 +13,8 @@ def gcd_game():
         result = math.gcd(number1, number2)
         answer_user = int(questions_answer([number1, number2]))
         if answer_user != result:
-            print(f"'{answer_user}' is wrong answer ;(. Correct answer was '{result}'.")
+            print(f"'{answer_user}' is wrong answer ;(.", end=" ")
+            print(f"Correct answer was '{result}'.")
             print(f"Let's try again, {name}!")
             break
         else:

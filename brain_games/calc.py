@@ -18,7 +18,8 @@ def calc_game():
         }
         answer_user = int(questions_answer([number1, operator, number2]))
         if answer_user != result.get(operator):
-            print(f"'{answer_user}' is wrong answer ;(. Correct answer was '{result.get(operator)}'.")
+            print(f"'{answer_user}' is wrong answer ;(.", end=" ")
+            print(f"Correct answer was '{result.get(operator)}'.")
             print(f"Let's try again, {name}!")
             break
         else:

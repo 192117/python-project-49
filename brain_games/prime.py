@@ -23,7 +23,8 @@ def prime_game():
             print('Correct!')
             count += 1
         else:
-            print(f"'{answer_user}' is wrong answer ;(. Correct answer was '{'yes' if isprime(number) else 'no'}'.")
+            print(f"'{answer_user}' is wrong answer ;(.", end=" ")
+            print(f"Correct answer was '{'yes' if isprime(number) else 'no'}'.")
             print(f"Let's try again, {name}!")
             break
     else:

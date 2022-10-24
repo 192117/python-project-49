@@ -14,11 +14,13 @@ def even_game():
             print('Correct!')
             count += 1
         elif (number % 2 == 0 and answer_user == 'no'):
-            print(f"'{answer_user}' is wrong answer ;(. Correct answer was 'yes'.")
+            print(f"'{answer_user}' is wrong answer ;(.", end=" ")
+            print("Correct answer was 'yes'.")
             print(f"Let's try again, {name}!")
             break
         elif (number % 2 != 0 and answer_user == 'yes'):
-            print(f"'{answer_user}' is wrong answer ;(. Correct answer was 'no'.")
+            print(f"'{answer_user}' is wrong answer ;(.", end=" ")
+            print("Correct answer was 'no'.")
             print(f"Let's try again, {name}!")
             break
     else:
