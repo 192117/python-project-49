@@ -4,7 +4,6 @@ import math
 
 
 def gcd_game():
-    operators = ['+', '-', "*"]
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     print('Find the greatest common divisor of given numbers.')

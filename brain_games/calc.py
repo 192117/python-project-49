@@ -13,9 +13,9 @@ def calc_game():
         number2 = random.randint(1, 100)
         operator = random.choice(operators)
         result = {
-            '+': number1+number2,
-            '-': number1-number2,
-            '*': number1*number2
+            '+': number1 + number2,
+            '-': number1 - number2,
+            '*': number1 * number2
         }
         print(f'Question: {number1} {operator} {number2}')
         answer_user = int(prompt.string('Your answer: '))
