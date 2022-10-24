@@ -7,8 +7,11 @@ def progression_game():
     print('What number is missing in the progression?')
     count = 0
     while count < 3:
-        values = [i for i in range(random.randint(1, 20), random.randint(58, 79), random.randint(1, 8))]
-        ind = random.randint(0, len(values))
+        step = random.randint(1, 24)
+        values = [random.randint(1, 20)]
+        for i in range(0, 10):
+            values.append(values[-1] + step)
+        ind = random.randint(0, len(values)-1)
         answer, values[ind] = values[ind], '..'
         answer_user = int(questions_answer(values))
         if answer_user != answer:
