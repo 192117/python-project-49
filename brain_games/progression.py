@@ -2,7 +2,7 @@ import prompt
 import random
 
 
-def progression():
+def progression_game():
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     print('What number is missing in the progression?')
